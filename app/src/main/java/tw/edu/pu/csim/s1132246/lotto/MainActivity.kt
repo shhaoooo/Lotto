@@ -30,9 +30,12 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Play(modifier: Modifier = Modifier) {  // 移除 name 參數
+fun Play(modifier: Modifier = Modifier) {
+    var lucky = (1..100).random()
+
     Text(
-        text = "Hello !",  // 或改成你想要的文字
+        text = "樂透數字(1-100)為 $lucky",
         modifier = modifier
     )
+
 }
